@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * */
 @SpringBootApplication
 @RestController
-public class SpringRabbitmqApp {
+public class SpringRabbitmqProducerApp {
 
     @Value("${rabbit.routing.key}")
     private String routingKey;
@@ -39,6 +39,6 @@ public class SpringRabbitmqApp {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringRabbitmqApp.class, args);
+        SpringApplication.run(SpringRabbitmqProducerApp.class, args);
     }
 }
