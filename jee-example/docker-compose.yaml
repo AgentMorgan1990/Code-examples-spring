@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  web:
+    image: tomcat:9.0.48
+    volumes:
+      - ./target/jee.war:/usr/local/tomcat/webapps/jee.war
+      - ./src/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+    ports:
+      - '8082:8080'
