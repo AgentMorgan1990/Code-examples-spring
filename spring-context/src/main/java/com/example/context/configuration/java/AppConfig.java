@@ -1,4 +1,4 @@
-package com.example.context.java_config;
+package com.example.context.configuration.java;
 
 
 import com.example.context.Camera;
