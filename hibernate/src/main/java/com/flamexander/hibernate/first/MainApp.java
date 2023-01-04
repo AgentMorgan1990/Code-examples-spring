@@ -1,7 +1,8 @@
-package com.example.hibernate;
+package com.flamexander.hibernate.first;
 
 public class MainApp {
     public static void main(String[] args) {
+
         SessionFactoryUtils sessionFactoryUtils = new SessionFactoryUtils();
         sessionFactoryUtils.init();
         try {

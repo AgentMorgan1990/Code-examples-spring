@@ -1,4 +1,4 @@
-package com.example.hibernate;
+package com.flamexander.hibernate.first;
 
 import javax.persistence.*;
 
