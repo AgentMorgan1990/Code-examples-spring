@@ -9,6 +9,7 @@
         <module>rabbitmq</module>
         <module>spring-context</module>
         <module>spring-boot-and-thymeleaf</module>
+        <module>hibernate</module>
     </modules>
 
     <parent>
