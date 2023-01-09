@@ -1,7 +1,6 @@
-package com.example.hibernate;
+package com.flamexander.hibernate.first;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface UserDAO {
     User findById(Long id);

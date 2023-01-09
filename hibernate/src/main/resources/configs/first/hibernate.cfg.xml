@@ -52,6 +52,6 @@
         <property name="current_session_context_class">thread</property>
         <property name="hibernate.hbm2ddl.auto">create-drop</property>
 
-        <mapping class="com.example.hibernate.User"/>
+        <mapping class="com.flamexander.hibernate.first.User"/>
     </session-factory>
 </hibernate-configuration>

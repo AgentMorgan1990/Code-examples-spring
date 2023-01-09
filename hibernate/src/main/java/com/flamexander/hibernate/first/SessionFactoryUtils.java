@@ -1,4 +1,4 @@
-package com.example.hibernate;
+package com.flamexander.hibernate.first;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -16,7 +16,7 @@ public class SessionFactoryUtils {
 
     public void init() {
         factory = new Configuration()
-                .configure("hibernate.cfg.xml")
+                .configure("configs/first/hibernate.cfg.xml")
                 .buildSessionFactory();
     }
 
