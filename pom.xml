@@ -10,6 +10,7 @@
         <module>spring-context</module>
         <module>spring-boot-and-thymeleaf</module>
         <module>hibernate</module>
+        <module>spring-data-jpa-and-flyway</module>
     </modules>
 
     <parent>
