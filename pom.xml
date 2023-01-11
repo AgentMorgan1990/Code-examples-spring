@@ -11,6 +11,9 @@
         <module>spring-boot-and-thymeleaf</module>
         <module>hibernate</module>
         <module>spring-data-jpa-and-flyway</module>
+        <module>spring-security</module>
+        <module>spring-security-inmemory</module>
+        <module>spring-security-jdbc</module>
     </modules>
 
     <parent>
