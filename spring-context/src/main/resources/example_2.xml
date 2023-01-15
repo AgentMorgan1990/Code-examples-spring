@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--    Невозможно создать бин из интерфейса,например Music, поэтому должно быть что-то конкретное -> ClassicalMusic  -->
+    <bean id="musicBean" class="com.example.context.xml.example_2.ClassicalMusic">
+    </bean>
+
+    <bean id="musicPlayer" class="com.example.context.xml.example_2.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
+
+</beans>

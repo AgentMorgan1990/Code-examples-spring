@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--Указываем папку с пропертями, чтобы оттуда можно было забирать значения-->
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+
+    <!--    Невозможно создать бин из интерфейса,например Music, поэтому должно быть что-то конкретное -> ClassicalMusic  -->
+    <bean id="musicBean"
+          class="com.example.context.xml.example_3.ClassicalMusic">
+    </bean>
+
+    <!--    Внедрение зависимостей и установление значение полей через сеттеры, в агрументе name спринг ищет сеттер setName и -->
+    <!--    откидывае set, можем устанавливать как значения так и ссылки-->
+    <bean id="musicPlayer"
+          class="com.example.context.xml.example_3.MusicPlayer">
+        <property name="music" ref="musicBean"/>
+        <!--        <property name="name" value="Some name"/>-->
+        <!--        <property name="volume" value="60"/>-->
+
+        <!--        Ссылка на проперти файл-->
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
+    </bean>
+
+</beans>

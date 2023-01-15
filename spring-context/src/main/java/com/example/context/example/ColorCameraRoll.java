@@ -1,4 +1,4 @@
-package com.example.context;
+package com.example.context.example;
 
 public class ColorCameraRoll implements CameraRoll {
     @Override

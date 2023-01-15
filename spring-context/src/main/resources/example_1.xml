@@ -5,10 +5,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="cameraRoll" class="com.example.context.ColorCameraRoll"/>
 
-    <bean id="camera" class="com.example.context.Camera">
-        <property name="cameraRoll" ref="cameraRoll"/>
+<!--    Невозможно создать бин из интерфейса,например Music, поэтому должно быть что-то конкретное -> ClassicalMusic  -->
+    <bean id="musicBean" class="com.example.context.xml.example_1.ClassicalMusic">
     </bean>
 
 </beans>
