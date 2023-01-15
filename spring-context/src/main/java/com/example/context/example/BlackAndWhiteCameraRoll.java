@@ -1,4 +1,4 @@
-package com.example.context;
+package com.example.context.example;
 
 public class BlackAndWhiteCameraRoll implements CameraRoll {
     public void processing() {

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--Указываем папку с пропертями, чтобы оттуда можно было забирать значения-->
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+
+    <!--    Невозможно создать бин из интерфейса,например Music, поэтому должно быть что-то конкретное -> ClassicalMusic  -->
+    <bean id="classicalMusicBean"
+          class="com.example.context.xml.example_4.ClassicalMusic">
+    </bean>
+
+    <bean id="rockMusicBean"
+          class="com.example.context.xml.example_4.RockMusic">
+    </bean>
+
+    <bean id="popMusicBean"
+          class="com.example.context.xml.example_4.PopMusic">
+    </bean>
+
+
+    <!--    Внедрение зависимостей и установление значение полей через сеттеры, в агрументе name спринг ищет сеттер setName и -->
+    <!--    откидывае set, можем устанавливать как значения так и ссылки-->
+    <bean id="musicPlayer" class="com.example.context.xml.example_4.MusicPlayer">
+
+<!--        Пример внедрения листа бинов-->
+        <property name="musics">
+            <list value-type="java.util.ArrayList">
+                <ref bean="classicalMusicBean"/>
+                <ref bean="rockMusicBean"/>
+                <ref bean="popMusicBean"/>
+            </list>
+        </property>
+
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
+    </bean>
+
+</beans>
