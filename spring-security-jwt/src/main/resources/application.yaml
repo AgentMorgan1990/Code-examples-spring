@@ -1,0 +1,13 @@
+server:
+  port: 8189
+#  servlet:
+#    context-path: /jdbc
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:mydatabase;MODE=PostgreSQL
+    username: sa
+    password:
+jwt:
+  secret: secret
+  lifetime: 3600000

@@ -14,6 +14,7 @@
         <module>spring-security</module>
         <module>spring-security-inmemory</module>
         <module>spring-security-jdbc</module>
+        <module>spring-security-with-boot3-and-keycloak-oauth2</module>
     </modules>
 
     <parent>
